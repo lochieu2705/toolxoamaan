@@ -222,7 +222,7 @@
 
       usernameInput.disabled = false;
       usernameInput.placeholder = 'Nhập tên tài khoản...';
-      // chưa cho vào game ngay
+    
       log(`Chọn server ${selectedServer}`);
     });
   });
@@ -231,7 +231,7 @@
   return /^(?=.*[a-zA-Z])[a-zA-Z0-9]{6,}$/.test(u); 
 }
 
-  // validate khi nhập
+ 
   usernameInput.addEventListener('input', function(){
     if (this.value.includes(' ')) this.value = this.value.replace(/\s/g,'');
 
@@ -258,7 +258,7 @@
     deleteBtn.disabled = false;
   });
 
-  // hiệu ứng decrypting khi nhập xong
+  
   usernameInput.addEventListener('blur', function(){
     if (isValid(this.value)){
       let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -315,13 +315,13 @@
       statusBox.classList.add('deleted');
       log(`Xoá thành công: ${usernameInput.value}`);
 
-      // ✔ chỉ lúc này mới cho vào game
+      
       document.getElementById('playBtn').disabled = false;
     }, 1200);
   }
 </script>
 
-<div style="position: fixed; bottom: 8px; width: 100%; text-align: center; font-size: 12px; opacity: 0.6;">
+<div style="position: fixed; bottom: 55px; width: 100%; text-align: center; font-size: 20px; opacity: 0.6;">
   TOOL XOÁ MÃ ẨN CỦA HIỆU
 </div>
 
